@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from "react";
+import ModalPopup from "./components/modal/TransitionsModal";
+import { Button } from "@mui/material";
 
 function App() {
+  const [open, setOpen] = React.useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <div className="bgBlack">
+          <button
+            onClick={() => setOpen((prevVa) => !prevVa)}
+            className="floatingBtn button"
+          >
+            Chat Us
+          </button>
+        </div>
+        <ModalPopup open={open} setOpen={setOpen} />
+      </div>
+    </>
   );
 }
 

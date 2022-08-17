@@ -1,0 +1,58 @@
+.outerContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #002a39;
+  /* padding: 30px; */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.filledBtn {
+  background-color: rgb(8, 7, 90);
+}
+
+.innerContainer {
+  height: 50%;
+  border-radius: 20px;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.buttons {
+  /* background: #dfdfdf; */
+  padding: 4px;
+  border-radius: 3px;
+  position: relative;
+  width: fit-content;
+}
+
+.buttons input {
+  appearance: none;
+  border-radius: 20px;
+  padding: 3px;
+  cursor: pointer;
+  /* border-radius: 2px; */
+  padding: 5px 10px;
+  background: #3f414d;
+  color: #ececec;
+  font-size: 13px;
+  font-family: sans-serif;
+  transition: all 0.1s;
+}
+
+.buttons input:checked {
+  background: #c926bb;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0px #808080;
+}
+
+.buttons input::before {
+  content: attr(label);
+  text-align: center;
+}
